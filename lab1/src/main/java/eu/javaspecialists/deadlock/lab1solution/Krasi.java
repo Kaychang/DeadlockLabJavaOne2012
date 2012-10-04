@@ -18,7 +18,7 @@ public class Krasi implements Comparable<Krasi> {
 
     @Override
     public int compareTo(Krasi o) {
-        return Integer.compare(cupNumber, o.cupNumber);
+        return (cupNumber < o.cupNumber) ? -1 : ((cupNumber == o.cupNumber) ? 0 : 1);
     }
 
     @Override

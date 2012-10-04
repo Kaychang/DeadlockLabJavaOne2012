@@ -34,7 +34,7 @@ public class Symposium {
         // let the reference to the Symposium escape.
         ExecutorService exec = Executors.newCachedThreadPool();
         CompletionService<String> results =
-                new ExecutorCompletionService<>(exec);
+                new ExecutorCompletionService<String>(exec);
         for (Thinker thinker : thinkers) {
             results.submit(thinker);
         }
